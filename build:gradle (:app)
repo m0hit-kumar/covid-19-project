@@ -5,13 +5,13 @@ android {
     buildToolsVersion "29.0.3"
 
     defaultConfig {
-        applicationId "com.example.realtime"
+        applicationId "com.example.covid_19"
         minSdkVersion 16
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
 
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
 
     buildTypes {
@@ -19,6 +19,10 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+    }
+    compileOptions {
+        targetCompatibility = 1.8
+        sourceCompatibility = 1.8
     }
 
 }
@@ -31,5 +35,11 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
-    compile 'com.jjoe64:graphview:4.2.1'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'com.github.blackfizz:eazegraph:1.2.5l@aar'
+    implementation 'com.nineoldandroids:library:2.4.0'
+    implementation 'com.leo.simplearcloader:simplearcloader:1.0.+'
+    implementation 'com.android.volley:volley:1.1.1'
+
+
 }
