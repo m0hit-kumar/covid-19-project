@@ -1,129 +1,111 @@
-<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="@color/color_white">
+    android:background="@color/color_white"
+    tools:context=".MainActivity">
 
-    <android.support.v7.widget.CardView
-        android:id="@+id/cardVewGraph"
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="180dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginRight="20dp"
         android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
         app:cardElevation="10dp"
+        android:id="@+id/cardViewGraph"
         app:cardCornerRadius="5dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal"
-            android:weightSum="2">
-
-
+            android:weightSum="2"
+            >
             <org.eazegraph.lib.charts.PieChart
                 android:id="@+id/piechart"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="15dp"
+                android:padding="6dp"
+                android:layout_weight="1"
                 android:layout_marginTop="15dp"
+                android:layout_marginStart="15dp"
                 android:layout_marginBottom="15dp"
-                android:baselineAligned="false"
-                android:padding="6dp" />
-
-
+                android:layout_marginLeft="15dp" />
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_gravity="center_vertical"
-                android:layout_marginLeft="20dp"
                 android:layout_weight="1"
-                android:baselineAligned="false"
-                android:orientation="vertical">
+                android:layout_marginStart="20dp"
+                android:orientation="vertical"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="20dp">
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="15dp"
-                    android:baselineAligned="false"
                     android:gravity="center_vertical">
-
                     <View
                         android:layout_width="15dp"
                         android:layout_height="match_parent"
-                        android:background="@color/cases" />
-
+                        android:background="@color/cases"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingLeft="10dp"
-                        android:text="total cases" />
-
+                        android:text="Total cases"
+                        android:paddingRight="10dp"
+                        android:paddingLeft="10dp"/>
 
                 </LinearLayout>
-
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="15dp"
-                    android:layout_marginTop="5dp"
-                    android:baselineAligned="false"
-                    android:gravity="center_vertical">
-
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="5dp">
                     <View
                         android:layout_width="15dp"
                         android:layout_height="match_parent"
-                        android:background="@color/recover" />
-
+                        android:background="@color/recovered"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingLeft="10dp"
-                        android:text="recovered" />
-
+                        android:text="Recovered"
+                        android:paddingRight="10dp"
+                        android:paddingLeft="10dp"/>
 
                 </LinearLayout>
-
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="15dp"
-                    android:layout_marginTop="5dp"
-                    android:baselineAligned="false"
-                    android:gravity="center_vertical">
-
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="5dp">
                     <View
                         android:layout_width="15dp"
                         android:layout_height="match_parent"
-                        android:background="@color/deaths" />
-
+                        android:background="@color/deaths"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingLeft="10dp"
-                        android:text="deaths" />
-
+                        android:text="Deaths"
+                        android:paddingRight="10dp"
+                        android:paddingLeft="10dp"/>
 
                 </LinearLayout>
-
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="15dp"
-                    android:layout_marginTop="5dp"
-                    android:baselineAligned="false"
-                    android:gravity="center_vertical">
-
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="5dp">
                     <View
                         android:layout_width="15dp"
                         android:layout_height="match_parent"
-                        android:background="@color/active" />
-
+                        android:background="@color/active"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingLeft="10dp"
-                        android:text="active" />
-
+                        android:text="Active"
+                        android:paddingRight="10dp"
+                        android:paddingLeft="10dp"/>
 
                 </LinearLayout>
             </LinearLayout>
@@ -132,115 +114,149 @@
 
 
 
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/cardViewGraph"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        app:cardElevation="10dp"
+        app:cardCornerRadius="5dp"
+        >
 
-
-
-
-
-
-
-    </android.support.v7.widget.CardView>
-
-        <android.support.v7.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="180dp"
-            android:layout_below="@+id/cardVewGraph"
-            android:layout_above="@id/btnTrack"
-            android:layout_marginTop="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginLeft="20dp"
-            app:cardElevation="10dp"
-            app:cardCornerRadius="5dp">
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-                <com.leo.simplearcloader.SimpleArcLoader
-                    android:visibility="gone"
-                    android:id="@+id/loader"
-                    android:layout_centerInParent="true"
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    app:arc_style="simple_arc">
-                </com.leo.simplearcloader.SimpleArcLoader>
-                <ScrollView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:id="@+id/scrollStats">
-                   <LinearLayout
-                       android:layout_width="match_parent"
-                       android:layout_height="wrap_content"
-                       android:orientation="vertical">
-                       <TextView
-                           android:layout_width="match_parent"
-                           android:layout_height="wrap_content"
-                           android:text="stats"
-                           android:textAllCaps="true"
-                           android:textSize="28sp"
-                           android:textStyle="bold"
-                           android:layout_marginLeft="25dp"
-                           android:layout_marginTop="20dp"/>
-                       <View
-                           android:layout_width="match_parent"
-                           android:layout_height="1dp"
-                           android:background="@color/color_two"
-                           android:layout_marginLeft="20dp"
-                           android:layout_marginRight="20dp"
-                           android:layout_margintop="25dp"/>
-                       <RelativeLayout
-                           android:layout_width="match_parent"
-                           android:layout_height="wrap_content"
-                           android:layout_marginLeft="25dp"
-                           android:layout_marginRight="25dp"
-                           android:layout_margintop="10dp"
-                           android:layout_marginBottom="10dp" >
-                           <TextView
-                               android:layout_width="wrap_content"
-                               android:layout_height="wrap_content"
-                               android:text="cases"
-                               android:textSize="18sp"/>
-                           <TextView
-                               android:id="@+id/tvCases"
-                               android:layout_width="fill_parent"
-                               android:layout_height="wrap_content"
-                               android:text="0"
-                               android:textAlignment="textEnd"
-                               android:textSize="18sp"
-
-                               android:gravity="end" />
-
-
-                       </RelativeLayout>
-
-
-
-
-
-
-                   </LinearLayout>
-                </ScrollView>
-
-
-
-
-            </RelativeLayout>
-
-        </android.support.v7.widget.CardView>
-
-
-
-        <Button
-            android:id="@+id/btnTrack"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_margin="20dp"
-            android:background="@color/color_one"
-            android:text="track records"
-            android:textColor="@color/color_white"
-            android:textSize="18sp"
-            android:padding="5dp"
-            android:onClick="goTrackCountries" />
+            android:orientation="vertical">
 
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:text="STATS"
+                android:textAllCaps="true"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/color_two" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/cases"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tvcases"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:text="0"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/color_one" />
+                </RelativeLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/color_two" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="recovred"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tvrecoverd"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:text="0"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/color_one" />
+                </RelativeLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/color_two" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/deaths"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tvdeaths"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:text="0"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/color_one" />
+                </RelativeLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/color_two" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/active"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tvactive"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:text="0"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/color_one" />
+                </RelativeLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/color_two" />
+
+
+<
+            </ScrollView>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
 
 
 </RelativeLayout>
